@@ -1,0 +1,8 @@
+name,date_of_birth,place_of_birth,mother_name,taj_number,tax_identifier,email
+John Doe,1960-01-01,New York,Martha Doe,11111111,123456789,john.doe@email.com
+Jane Doe,1964-03-03,Chicago,Emily Doe,33333333,345678901,janedoe@email.com
+Mary Johnson,1966-04-04,Houston,Lydia Johnson,44444444,456789012,maryjohnson@email.com
+James Brown,1968-05-05,Philadelphia,Nancy Brown,55555555,567890123,jamesbrown@email.com
+Patricia Davis,1970-06-06,Phoenix,Judith Davis,66666666,678901234,patriciadavis@email.com
+Robert Miller,1972-07-07,San Antonio,Karen Miller,77777777,789012345,robertmiller@email.com
+Linda Wilson,1974-08-08,San Diego,Grace Wilson,88888888,890123456,lindawilson@email.com

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+	<changeSet id="1" author="zoltan.domonkos">
+		<createTable tableName="customer_data">
+			<column name="id" type="bigint" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="name" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="date_of_birth" type="date">
+				<constraints nullable="false"/>
+			</column>
+			<column name="place_of_birth" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="mother_name" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="taj_number" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="tax_identifier" type="varchar(255)"/>
+			<column name="email" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="2" author="zoltan.domonkos">
+		<createTable tableName="address">
+			<column name="id" type="bigint" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="user_id" type="bigint">
+				<constraints nullable="false"/>
+			</column>
+			<column name="zipcode" type="varchar(10)" />
+			<column name="city" type="varchar(255)" />
+			<column name="street" type="varchar(255)" />
+			<column name="house_number" type="varchar(20)" />
+			<column name="additional_info" type="varchar(255)" />
+		</createTable>
+		<addForeignKeyConstraint baseTableName="address" baseColumnNames="user_id"
+			constraintName="fk_address_user"
+			referencedTableName="customer_data" referencedColumnNames="id"/>
+	</changeSet>
+
+	<changeSet id="3" author="zoltan.domonkos">
+		<createTable tableName="phone_number">
+			<column name="id" type="bigint" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="user_id" type="bigint">
+				<constraints nullable="false"/>
+			</column>
+			<column name="phone_number" type="varchar(20)" />
+			<column name="phone_type" type="varchar(20)" />
+		</createTable>
+		<addForeignKeyConstraint baseTableName="phone_number" baseColumnNames="user_id"
+			constraintName="fk_phone_user"
+			referencedTableName="customer_data" referencedColumnNames="id"/>
+	</changeSet>
+
+</databaseChangeLog>

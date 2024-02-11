@@ -1,0 +1,11 @@
+user_id,zipcode,city,street,house_number,additional_info
+1,90210,Beverly Hills,Wall Street,1,Apt. 42
+1,10001,New York,Park Avenue,2,Apt. 15
+2,34958,Florida,Orange Avenue,789,
+5,45987,Los Angeles,Elm Street,54,Apt. 20
+6,29837,San Francisco,Oak Street,67,
+4,19873,Chicago,Palm Street,890,Suite 33
+3,87654,Houston,Seagrass Lane,12,Apt. 10A
+2,28965,Philadelphia,Bay Saw Street,567,
+3,32675,Miami,Sir Palm Avenue,234,Apt. 35
+4,87691,Glendale,East Oak Street,786,Suite 45
