@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: dpd_db
+      POSTGRES_USER: dpd_user
+      POSTGRES_PASSWORD: dpd_pass
+    ports:
+      - "5432:5432"
+  backend:
+    build: ./dpd-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+  frontend:
+    build: ./dpd-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
